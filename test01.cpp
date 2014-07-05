@@ -4,7 +4,7 @@
 #include <chrono>
 
 const unsigned NUM_TESTS = 1000;
-const unsigned PER_TEST = 10000;
+const unsigned PER_TEST = 10001;
 
 struct TestStruct {
   int a;
@@ -31,27 +31,27 @@ struct TestStruct {
 void testFunc(TestStruct* array) {
   auto start = std::chrono::steady_clock::now();
 
-  // Test here
-  for (unsigned i = 0; i < PER_TEST; i++) {
-    array[i].a = i;
-    array[i].b = i;
-    array[i].c = i;
-    array[i].d = i;
-    array[i].b0 = true;
-    array[i].e = i;
-    array[i].f = i;
-    array[i].g = i;
-    array[i].h = i;
-    array[i].b1 = false;
-    array[i].i = i;
-    array[i].j = i;
-    array[i].k = i;
-    array[i].l = i;
-    array[i].b2 = true;
-    array[i].m = i;
-    array[i].n = i;
-    array[i].o = i;
-    array[i].b3 = true;
+  // Test here (read/write)
+  for (unsigned i = 0; i < PER_TEST - 1; i++) {
+    array[i + 1].a = array[i].a;
+    array[i + 1].b = array[i].b;
+    array[i + 1].c = array[i].c;
+    array[i + 1].d = array[i].d;
+    array[i + 1].b0 = array[i].b0;
+    array[i + 1].e = array[i].e;
+    array[i + 1].f = array[i].f;
+    array[i + 1].g = array[i].g;
+    array[i + 1].h = array[i].h;
+    array[i + 1].b1 = array[i].b1;
+    array[i + 1].i = array[i].i;
+    array[i + 1].j = array[i].j;
+    array[i + 1].k = array[i].k;
+    array[i + 1].l = array[i].l;
+    array[i + 1].b2 = array[i].b2;
+    array[i + 1].m = array[i].m;
+    array[i + 1].n = array[i].n;
+    array[i + 1].o = array[i].o;
+    array[i + 1].b3 = array[i].b3;
   }
   
   auto end = std::chrono::steady_clock::now();
