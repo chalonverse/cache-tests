@@ -23,3 +23,6 @@
 # Bitcode
 *.bc
 *.ll
+
+# Temp
+*~

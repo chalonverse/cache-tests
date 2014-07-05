@@ -1,5 +1,5 @@
-// Sequential access, unoptimized
-// sizeof(TestStruct) == 76
+// Sequential access, optimized
+// sizeof(TestStruct) == 64
 #include <iostream>
 #include <chrono>
 
@@ -11,21 +11,18 @@ struct TestStruct {
   int b;
   int c;
   int d;
-  bool b0;
   int e;
   int f;
   int g;
   int h;
-  bool b1;
   int i;
   int j;
   int k;
   int l;
-  bool b2;
   int m;
   int n;
   int o;
-  bool b3;
+  bool b0, b1, b2, b3;
 };
 
 void testFunc(TestStruct* array) {
