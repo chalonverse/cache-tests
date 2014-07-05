@@ -1092,7 +1092,7 @@ fn=check_match.9458
 134 5132 0 0 2566 153 117 0 0 0
 136 3849 0 0 1283 0 0 0 0 0
 146 3846 0 0 1282 0 0 1282 12 6
-149 2816 0 0 1408 0 0 42 1 0
+149 2816 0 0 1408 0 0 42 2 0
 153 2564 0 0 2564 8 1 0 0 0
 154 3846 1 1 1282 0 0 0 0 0
 156 2560 0 0 0 0 0 0 0 0
@@ -1105,8 +1105,8 @@ fn=check_match.9458
 215 1 0 0 0 0 0 0 0 0
 222 8980 0 0 6415 0 0 0 0 0
 fn=do_lookup_x
-77 10416 1 1 3906 0 0 6510 5 3
-82 15624 2 2 2604 0 0 9114 9 5
+77 10416 1 1 3906 0 0 6510 4 3
+82 15624 2 2 2604 0 0 9114 10 5
 83 1302 0 0 1302 2 1 0 0 0
 89 1302 0 0 1302 0 0 0 0 0
 95 4322 0 0 0 0 0 4322 0 0
@@ -1251,7 +1251,7 @@ fn=_dl_higher_prime_number
 366 2 0 0 2 0 0 0 0 0
 fn=_dl_name_match_p
 288 1350 1 1 0 0 0 540 0 0
-289 1080 0 0 270 8 2 270 1 0
+289 1080 0 0 270 8 2 270 0 0
 290 286 0 0 0 0 0 0 0 0
 292 270 0 0 270 0 0 0 0 0
 294 1076 0 0 0 0 0 0 0 0
@@ -2268,7 +2268,7 @@ fn=_Exit
 fl=/build/buildd/eglibc-2.19/rt/../sysdeps/unix/clock_gettime.c
 fn=clock_gettime
 93 2000 1 1 0 0 0 0 0 0
-115 14000 1 1 6000 3002 0 2000 0 0
+115 14000 1 1 6000 3002 0 2000 999 0
 134 4000 0 0 2000 0 0 0 0 0
 fl=/build/buildd/eglibc-2.19/setjmp/../sysdeps/x86_64/bsd-_setjmp.S
 fn=_setjmp
@@ -3101,7 +3101,7 @@ fn=__gnu_cxx::stdio_sync_filebuf<char, std::char_traits<char> >::sync()
 fn=__gnu_cxx::stdio_sync_filebuf<wchar_t, std::char_traits<wchar_t> >::sync()
 0 6 0 0 3 2 2 0 0 0
 fn=__libc_csu_init
-0 41 4 3 9 2 0 9 0 0
+0 41 3 2 9 2 0 9 0 0
 fn=__log_finite
 0 9 1 1 2 0 0 1 0 0
 fn=_dl_debug_initialize
@@ -3119,7 +3119,7 @@ fn=bool std::has_facet<std::num_put<char, std::ostreambuf_iterator<char, std::ch
 fn=bool std::has_facet<std::num_put<wchar_t, std::ostreambuf_iterator<wchar_t, std::char_traits<wchar_t> > > >(std::locale const&)
 0 84 2 2 36 1 0 12 0 0
 fn=main
-0 130024012 4 3 11003 3000 2125 100004002 10001126 10000077
+0 11012 2 2 1003 1000 125 3002 126 77
 fn=memcpy@GLIBC_2.2.5
 0 12 1 1 4 0 0 0 0 0
 fn=operator new(unsigned long)
@@ -3222,4 +3222,6 @@ fn=std::numpunct<wchar_t>::_M_initialize_numpunct(__locale_struct*)
 0 349 5 5 73 0 0 75 3 3
 fn=std::ostream::flush()
 0 42 1 1 21 10 10 6 0 0
-summary: 131748418 1370 1251 433763 18177 8471 100165940 10003785 10002341
+fn=testFunc(TestStruct*)
+0 240009000 2 1 190001000 10002000 10001000 20002000 0 0
+summary: 241744418 1369 1250 190424763 10018177 10007471 20166940 3784 2341

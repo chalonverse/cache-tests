@@ -1,7 +1,7 @@
 # Makefile for tests
 
 # Executable files
-EXEC_FILES = test01.out test01-opt.out
+EXEC_FILES = test01.out test01-opt.out test02.out test02-opt.out
 
 ##
 LLVM_ROOT = ..
