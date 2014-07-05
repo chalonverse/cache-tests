@@ -13,14 +13,14 @@ DIS = $(LLVM_ROOT)/bin/llvm-dis
 all: $(EXEC_FILES)
 
 clean:
-	rm -f *.out *.bc *.ll *.txt *.stats
+	rm -f *.out *.bc *.ll
 
 # First do output version for stats,
 # then no output version for valgrind
 %.out: %.cpp
 	$(CLANG) $(CLANG_FLAGS) -D SHOW_OUTPUT $(@:%.out=%.cpp) -o $@
-	./$@ > $(@:%.out=%.txt)
+	./$@ > results/$(@:%.out=%.txt)
 	$(CLANG) $(CLANG_FLAGS) $(@:%.out=%.cpp) -o $@
 	$(CLANG) $(CLANG_BC_FLAGS) $(@:%.out=%.cpp) -o $(@:%.out=%.bc)
 	$(DIS) -f $(@:%.out=%.bc)
-	valgrind --tool=cachegrind --cachegrind-out-file=$(@:%.out=%.cg.stats) --log-file=$(@:%.out=%.cg.txt) ./$@
+	valgrind --tool=cachegrind --cachegrind-out-file=results/$(@:%.out=%.cg.stats) --log-file=results/$(@:%.out=%.cg.txt) ./$@
