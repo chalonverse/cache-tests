@@ -1,22 +1,22 @@
-==4412== Cachegrind, a cache and branch-prediction profiler
-==4412== Copyright (C) 2002-2013, and GNU GPL'd, by Nicholas Nethercote et al.
-==4412== Using Valgrind-3.10.0.SVN and LibVEX; rerun with -h for copyright info
-==4412== Command: ./test01-opt.out
-==4412== Parent PID: 4388
-==4412== 
-==4412== 
-==4412== I   refs:      241,744,400
-==4412== I1  misses:          1,369
-==4412== LLi misses:          1,250
-==4412== I1  miss rate:        0.00%
-==4412== LLi miss rate:        0.00%
-==4412== 
-==4412== D   refs:      210,591,700  (190,424,760 rd   + 20,166,940 wr)
-==4412== D1  misses:     10,021,966  ( 10,018,177 rd   +      3,789 wr)
-==4412== LLd misses:     10,009,813  ( 10,007,470 rd   +      2,343 wr)
-==4412== D1  miss rate:         4.7% (        5.2%     +        0.0%  )
-==4412== LLd miss rate:         4.7% (        5.2%     +        0.0%  )
-==4412== 
-==4412== LL refs:        10,023,335  ( 10,019,546 rd   +      3,789 wr)
-==4412== LL misses:      10,011,063  ( 10,008,720 rd   +      2,343 wr)
-==4412== LL miss rate:          2.2% (        2.3%     +        0.0%  )
+==2394== Cachegrind, a cache and branch-prediction profiler
+==2394== Copyright (C) 2002-2013, and GNU GPL'd, by Nicholas Nethercote et al.
+==2394== Using Valgrind-3.10.0.SVN and LibVEX; rerun with -h for copyright info
+==2394== Command: ./test01-opt.out
+==2394== Parent PID: 2363
+==2394== 
+==2394== 
+==2394== I   refs:      241,744,781
+==2394== I1  misses:          1,370
+==2394== LLi misses:          1,251
+==2394== I1  miss rate:        0.00%
+==2394== LLi miss rate:        0.00%
+==2394== 
+==2394== D   refs:      210,591,763  (190,424,817 rd   + 20,166,946 wr)
+==2394== D1  misses:     10,021,989  ( 10,018,198 rd   +      3,791 wr)
+==2394== LLd misses:     10,009,816  ( 10,007,475 rd   +      2,341 wr)
+==2394== D1  miss rate:         4.7% (        5.2%     +        0.0%  )
+==2394== LLd miss rate:         4.7% (        5.2%     +        0.0%  )
+==2394== 
+==2394== LL refs:        10,023,359  ( 10,019,568 rd   +      3,791 wr)
+==2394== LL misses:      10,011,067  ( 10,008,726 rd   +      2,341 wr)
+==2394== LL miss rate:          2.2% (        2.3%     +        0.0%  )
